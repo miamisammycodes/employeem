@@ -1057,12 +1057,12 @@ CREATE DATABASE employeem CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 | Module | Backend | Frontend | Tests | Status |
 |--------|:-------:|:--------:|:-----:|:------:|
-| Multi-tenancy | ✅ | ⬜ | ⬜ | In Progress |
-| RBAC | ✅ | ⬜ | ⬜ | In Progress |
-| Companies | 🟡 | ⬜ | ⬜ | In Progress |
-| Locations | 🟡 | ⬜ | ⬜ | In Progress |
-| Departments | 🟡 | ⬜ | ⬜ | In Progress |
-| Job Titles | 🟡 | ⬜ | ⬜ | In Progress |
+| Multi-tenancy | ✅ | ⬜ | ⬜ | Backend Complete |
+| RBAC | ✅ | ⬜ | ⬜ | Backend Complete |
+| Companies | ✅ | ⬜ | ⬜ | Backend Complete |
+| Locations | ✅ | ⬜ | ⬜ | Backend Complete |
+| Departments | ✅ | ⬜ | ⬜ | Backend Complete |
+| Job Titles | ✅ | ⬜ | ⬜ | Backend Complete |
 | Employees | 🟡 | ⬜ | ⬜ | In Progress |
 | Org Chart | ⬜ | ⬜ | ⬜ | Not Started |
 | Attendance | ⬜ | ⬜ | ⬜ | Not Started |
