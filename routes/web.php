@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CompanyController as AdminCompanyController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\JobTitleController;
 use App\Http\Controllers\LocationController;
 use Illuminate\Support\Facades\Route;
@@ -58,6 +59,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('job-titles', JobTitleController::class);
     Route::post('job-titles/{job_title}/toggle-active', [JobTitleController::class, 'toggleActive'])
         ->name('job-titles.toggle-active');
+
+    // Employees
+    Route::resource('employees', EmployeeController::class);
+    Route::post('employees/{employee}/restore', [EmployeeController::class, 'restore'])
+        ->name('employees.restore')
+        ->withTrashed();
+    Route::post('employees/{employee}/terminate', [EmployeeController::class, 'terminate'])
+        ->name('employees.terminate');
+    Route::patch('employees/{employee}/status', [EmployeeController::class, 'updateStatus'])
+        ->name('employees.update-status');
+    Route::get('employees/{employee}/direct-reports', [EmployeeController::class, 'directReports'])
+        ->name('employees.direct-reports');
 });
 
 require __DIR__.'/settings.php';
